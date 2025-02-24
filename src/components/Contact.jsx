@@ -18,15 +18,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Create email content
-    const subject = `Portfolio Contact from ${formData.name}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    
-    // Create Gmail URL with pre-filled data
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=solomonadonay2@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    // Open Gmail in a new tab
-    window.open(gmailUrl, '_blank');
+    // Redirect to Spaceship WHOIS contact form
+    window.open('https://www.spaceship.com/domains/whois/contact/?d=snackshell.work', '_blank');
     
     // Clear form
     setFormData({
